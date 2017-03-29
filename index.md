@@ -24,3 +24,7 @@ From the very first moment we understood that securing our bikes would have been
 1. Grab a Bike is sensitive and responsive: it can sense environmental pollution and suggest you to change your path. Moreover it interacts with you by means of the application.
  
 2. Grab a Bike is ubiquitous: many bikes can be scattered through the whole town allowing you to just look for the closest one.
+
+3. Grab a Bike is transparent: from the outside it seems a regular bike.
+
+4. Grab a Bike is intelligent: it detects when you're too close to a polluted area, it warns you if it's being stolen, it provides the CO2 saved to the ambient.
