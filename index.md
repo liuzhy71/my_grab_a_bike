@@ -26,3 +26,12 @@ From the very first moment we understood that securing our bikes would have been
 2. Grab a Bike is ubiquitous: many bikes can be scattered through the whole town allowing you to just look for the closest one.
  
 3. Grab a Bike is intelligent: it detects when you’re too close to a polluted or busy area, it warns you if it’s being stolen.
+
+### The team
+
+Name | Github Account | Email | Role 
+------------ | ------------ | ------------ | ------------
+Riccardo Coggiola | rcoggiola | s213787@studenti.polito.it | Hardware designer, programmer
+Fiorenza Conte | ConteF | s212929@studenti.polito.it | Hardware designer, programmer
+Nicola Gregorio Durante | kknickkk | me@ngdurante.eu | Software designer, programmer
+Zhaoyang Liu | liuzhy71 | s241506@studenti.polito.it | Software designer, programmer
