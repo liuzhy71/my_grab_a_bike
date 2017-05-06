@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>D2</title>
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/grab-a-bike/css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'>
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/grab-a-bike/">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/grab-a-bike//about" title="About Us">About Us</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <!-- <a href="https://github.com/KingFelix/emerald/archive/master.zip">Download</a> 
+<a href="https://github.com/KingFelix/emerald">Project on Github</a> -->
+	  <a href="https://github.com/AmI-2017/grab-a-bike">View on Github</a>
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.1.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header">
+	<a href="/grab-a-bike/">
+		 <img src="/grab-a-bike/img/bike.png" alt="Bike Logo"> 
+	  <h1>Grab a bike</h1>
+	</a>
+</header>
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>D2</h2>		
+	<time datetime="2017-05-06T00:00:00+02:00" class="by-line">06 May 2017</time>
+	<div class="content">
+
+		<h1 id="d2">D2</h1>
+<h2 id="purpose-and-scope">PURPOSE AND SCOPE</h2>
+<p>Grab a bike is an effort-free bike sharing service that focuses on the environment and user, providing hop and go feeling and an intelligent navigation through the city. 
+The system is designed to provide a service free from all the constraints of specific parking spots: the bike can be taken and left wherever the user needs. 
+Moreover, with a smart pollution monitoring system, grab-a-bike can prevent the user from passing through polluted spots in the city.</p>
+
+<h2 id="definitions">DEFINITIONS</h2>
+<h3 id="glossary">Glossary</h3>
+
+<ul>
+  <li><strong>App</strong>: Android based application (4.4+).</li>
+  <li><strong>The interface</strong>: the application.</li>
+  <li><strong>HW</strong>: the hardware part fixed on the bike crossbar.</li>
+  <li><strong>The sensor</strong>: the pollution sensor provided on the HW part.</li>
+  <li><strong>The lock</strong>: the lock managed by the HW and the app.</li>
+  <li><strong>LEDS</strong>: the LEDs fixed on the handle of the bike to provide the routing advice.</li>
+</ul>
+
+<h3 id="actors">Actors</h3>
+
+<p>Every adult citizen who has a smartphone with GPS and Internet connection, such as travelers, workers and students.</p>
+
+<h2 id="system-requirements">SYSTEM REQUIREMENTS</h2>
+<h3 id="functional-requirement">Functional requirement:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Functional area</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1-ID</td>
+      <td>User login, registration, and logout</td>
+    </tr>
+    <tr>
+      <td>2-LCTM</td>
+      <td>Bike locating, and map function</td>
+    </tr>
+    <tr>
+      <td>3- PUS</td>
+      <td>Pollution-sensing and reasoning</td>
+    </tr>
+    <tr>
+      <td>4- NTF</td>
+      <td>Notifications in the app and also the bike LEDs</td>
+    </tr>
+    <tr>
+      <td>5-ATS</td>
+      <td>Bike anti-stolen function</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>1.1 User registration</strong> - 
+<strong>Priority:1</strong>
+The user registration on the website is needed to control the bikes’ access.</p>
+
+<p><strong>1.2 User auto-login manual-logout</strong> - 
+<strong>Priority: 2</strong>
+The user will only need to login once on the app, the next time the interface will be acceded without a login. The logout will have to be done manually.
+The latest position of the bike is stored on a database. Once the bike is unlocked and locked again the position will be updated.</p>
+
+<p><strong>3.1.1 Pollution database</strong> - 
+<strong>Priority : 2</strong></p>
+
+<p>A database stores data about the pollution level as a function of the position. If the database has already pollution information of a certain place, the data is updated whenever a new value is detected. If the pollution level is greater than a given limit level, a flag is given to the user.</p>
+
+<p><strong>3.1.2 Sensing</strong> - 
+<strong>Priority : 1</strong>
+The pollution data is provided by a sensor embedded in the onboard system of the bike.</p>
+
+<p><strong>3.2. Position</strong> - 
+<strong>Priority : 2</strong>
+The GPS data is given by the GPS antenna of the user’s smartphone.</p>
+
+<p><strong>4.1 Anti-pollution Advice by means of a LED</strong> - 
+<strong>Priority: 2</strong>
+During the use of the bike, if the user position is close to a polluted place (pollution flag = 1) the notification LED turns on.</p>
+
+<p><strong>4.2 Anti-pollution advice - notification</strong> - 
+<strong>Priority: 3</strong></p>
+
+<p>During the use of the bike, if the user position is close to a polluted place (pollution flag = 1) the app sends a notification to the user.</p>
+
+<p><strong>5.1 Smart lock</strong> - 
+<strong>Priority: 1</strong>
+The bike is provided with an automatic lock, controlled by the user via the application.</p>
+
+<p><strong>5.2 Smart alarm</strong> - 
+<strong>Priority: 2</strong>
+When the bike is locked, if it is moved the alarm is activated.</p>
+
+<h2 id="non-functional-requirements">NON FUNCTIONAL REQUIREMENTS</h2>
+
+<ul>
+  <li>Portability: Android smartphones running KitKat or later (4.4+)</li>
+  <li>Efficiency: The response time for the system to detect the polluted area and warn the user of an alternative route is estimated to be a couple seconds maximum, this way the user experience won’t be compromised.</li>
+  <li>Privacy: User data is logged in the server anonymously, saving only the bike positions and the polluted areas.</li>
+  <li>Safety: The user ride through the city won’t be distracted with the smartphone screen, only a small screen/led on the bike will provide relevant information to the user.</li>
+</ul>
+
+<h1 id="open-issues">OPEN ISSUES</h1>
+<ul>
+  <li>Bike connection to the Internet</li>
+  <li>Bike theft detection and prevention</li>
+</ul>
+
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <!-- <footer><span>@2015 - Emerald</span></footer> -->
+
+	    <!-- Script -->
+      <script src="/grab-a-bike/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>
