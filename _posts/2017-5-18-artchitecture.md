@@ -75,14 +75,14 @@ title: Architecture
 
 ### Selected components
 ####Off the shelf
-Product name      | Description | Price 
-------------------|-------------|------
-Arduino Uno Rev3      | microcontroller board based on the ATmega328P | €20.00
-HC05 Bluetooth module        | serial transfer, able to work as master or slave device |€ 4.07
-Adafruit 10-DOF IMU Breakout | LSM303 accelerometer | $29.95
-ULN2003APG driver board with byj48 stepper motor | | €5.80
-Mq9 pollution sensor |  high sensitivity and fast response gas sensor | €11.60
-Android phone | OS version greater than 4.4.| no need to buy
+|Product name| Description | Price| 
+|------------|:------|:------|
+|Arduino Uno Rev3| microcontroller board based on the ATmega328P | €20.00|
+|HC05 Bluetooth module| serial transfer, able to work as master or slave device |€ 4.07|
+|Adafruit 10-DOF IMU Breakout | LSM303 accelerometer | $29.95|
+|ULN2003APG driver board with BJY48 stepper motor | 4 phase stepper motor for the smart lock | €5.80|
+|Mq9 pollution sensor |  high sensitivity and fast response gas sensor | €11.60|
+|Android phone | OS version greater than 4.4.| no need to buy|
 
 ### Software Components
 * The libraries for the Bluetooth module, the Adafruit 10-DOF IMU breakout, and the stepper moter is provided by the hardware manufacture company. And they are compiled in the Arduino software.
