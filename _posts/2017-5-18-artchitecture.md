@@ -75,10 +75,10 @@ title: Architecture
 
 ### Selected components
 ####Off the shelf
-Product name | Description | Price 
--------------|-------------|------
-Arduino Uno Rev3 | microcontroller board based on the ATmega328P | €20.00
-HC05 Bluetooth module | serial transfer, able to work as master or slave device |€ 4.07
+Product name      | Description | Price 
+------------------|-------------|------
+Arduino Uno Rev3      | microcontroller board based on the ATmega328P | €20.00
+HC05 Bluetooth module        | serial transfer, able to work as master or slave device |€ 4.07
 Adafruit 10-DOF IMU Breakout | LSM303 accelerometer | $29.95
 ULN2003APG driver board with byj48 stepper motor | | €5.80
 Mq9 pollution sensor |  high sensitivity and fast response gas sensor | €11.60
