@@ -3,7 +3,7 @@ title: Architecture
 ---
 # System architecture
 
-System diagram should be added here!
+![](img/sys stru.jpg)
 
 ## 	Hardware architecture
 ### Computional nodes:
@@ -78,15 +78,15 @@ System diagram should be added here!
 Product name | Description | Price 
 -------------|-------------|------
 Arduino Uno Rev3 | microcontroller board based on the ATmega328P | €20.00
-HC05 Bluetooth module | |€ 4.07
-Adafruit 10-DOF IMU Breakout | L3GD20H + LSM303 + BMP180 | $29.95
+HC05 Bluetooth module | serial transfer, able to work as master or slave device |€ 4.07
+Adafruit 10-DOF IMU Breakout | LSM303 accelerometer | $29.95
 ULN2003APG driver board with byj48 stepper motor | | €5.80
-Mq9 pollution sensor | | €11.60
+Mq9 pollution sensor |  high sensitivity and fast response gas sensor | €11.60
 Android phone | OS version greater than 4.4.| no need to buy
 
 ### Software Components
 * The libraries for the Bluetooth module, the Adafruit 10-DOF IMU breakout, and the stepper moter is provided by the hardware manufacture company. And they are compiled in the Arduino software.
 * The Android App Grab-a-bike uses standard andriod software developing library, and is developed using Andriod studio (version 2). 
-* The google map service is used in the smart phone, for detiails check https://developers.google.com/maps/documentation/android-api/
+* The google map service is used in the smart phone, for detiails check (https://developers.google.com/maps/documentation/android-api/)
 
 
