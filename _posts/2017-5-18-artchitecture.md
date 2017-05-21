@@ -79,7 +79,9 @@ title: Architecture
 *	Calculate the concentration of gas from the gas sensor.
 
 ### Selected components
+
 ####Off the shelf
+
 * **These is the components available in the market**
 
 |Product name| Description | Price| 
@@ -94,6 +96,6 @@ title: Architecture
 ### Software Components
 * The libraries for the Bluetooth module, the Adafruit 10-DOF IMU breakout, and the stepper moter is provided by the hardware manufacture company. And they are compiled in the Arduino software.
 * The Android App Grab-a-bike uses standard andriod software developing library, and is developed using Andriod studio (version 2). 
-* The google map service is used in the smart phone, for detiails check (https://developers.google.com/maps/documentation/android-api/)
+* The google map service is used in the smart phone, for detiails check [Google Map API](https://developers.google.com/maps/documentation/android-api/)
 
 
