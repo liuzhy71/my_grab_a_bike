@@ -9,8 +9,8 @@ title: Architecture
 ### Computional nodes:
 * **Smartphone**: 
     * Android phone (OS version>4.4) must held by the user while using the bike.
-    * Function:Provide login and logout, exchange data with on bike Raspberry Pi by Bluetooth, provide GPS location and present bike information.
-* **Raspberry Pi**:
+    * Function:Provide login and logout, exchange data with on bike Arduino by Bluetooth, provide GPS location and present bike information.
+* **Arduino**:
 	* Installed on the bike and connected with the Bluetooth module, all the sensor and the lock.
 	* Function:  reason when to sound the siren, calculate the position (pitch, roll, yaw) from the accelerometer.
 			Calculate the pollution level from the raw data from the gas concentration sensor.
@@ -19,29 +19,34 @@ title: Architecture
 ### Devices:
 #### Sensor system:
 * **Accelerometer**:
-	* Installed on the bike and connected with the on bike Raspberry Pi. 
-	* Function: provide anti-thief function, and trigger the siren when bike is moved.
+	* Installed on the bike and connected with the on bike Arduino. 
+	* Function: provide anti-thief function, give information to the Arduino about the current posture of the bike.
 * **Gas concentration sensor**:
-	* Installed on the bike and connected with the on bike Raspberry Pi.
+	* Installed on the bike and connected with the on bike Arduino.
 	* Function: detect the concentration level of pollution gas.
 #### Actuator system:
 * **Bluetooth module**:
-	* Installed on the bike and connected with the on bike Raspberry Pi.
+	* Installed on the bike and connected with the on bike Arduino.
 	* Function: exchange data and command with the smart phone.
 * **Smart lock**:
-	* Composed of a common lock and a motor to drive the lock, Installed on the bike and connected with the on bike Raspberry Pi.
+	* Composed of a common lock and a motor to drive the lock, Installed on the bike and connected with the on bike Arduino.
 	* Function: lock the bike.
-* **Siren**:
-	* Installed on the bike and connected with the on bike Raspberry Pi.
-	* Function: make some noise to get attention.
+
 #### Supporting system
 * **Bike**
 	* Normal city bike.
-	* Function: holder for the Pi and all the sensor.
+	* Function: holder for the Arduino and all the sensor.
 * **Battery**
 	* Power bank installed on the bike 
 	* Function: power the on bike circuit.
 ### User interface
+* **Siren**:
+	* Installed on the bike and connected with the on bike Arduino.
+	* Function: Give a warning when the bike is being moved when it is locked.
+* **LEDs**:
+    * Installed on the handle of the bike and connected with the on bike Arduino.
+    * Function: Give warnings when the polution in the air is too high.
+* **Smart Phone**:
    The smart phone works both as a computational node but also as an user interface.
 
 ## Software architecture
@@ -69,12 +74,14 @@ title: Architecture
 * Running on cloud.
 * Return map of the location sent, including image pins on the location of the bike
 
-### Position and Pollution level calculation on the raspberry Pi
+### Position and Pollution level calculation on the Arduino
 *	Calculate the position (pitch, roll, yaw) from the accelerometer.
 *	Calculate the concentration of gas from the gas sensor.
 
 ### Selected components
 ####Off the shelf
+* **These is the components available in the market**
+
 |Product name| Description | Price| 
 |------------|:------|:------|
 |Arduino Uno Rev3| microcontroller board based on the ATmega328P | €20.00|
