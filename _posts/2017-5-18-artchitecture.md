@@ -3,6 +3,14 @@ title: Architecture
 ---
 # System architecture
 
+The complete system includs on bike sub-system, user smart phone, database running on the remote server.
+* The on bike system includes sensors sensing pollution data and bike posture data. And the on bike processor controls 
+    the anti-thief function, pollution warning function. And the pollution data is sent to the smart phone.
+* The smart phone receives the pollution data and sends the data together with the location data to the 
+  remote server where the database is running.
+* The server receives and stores the location and pollution data, and provides them to the mobile phone
+  when the data is needed for user login and bike seeking.
+
 ![](img/sys stru.jpg)
 
 ## 	Hardware architecture
@@ -24,21 +32,23 @@ title: Architecture
 * **Gas concentration sensor**:
 	* Installed on the bike and connected with the on bike Arduino.
 	* Function: detect the concentration level of pollution gas.
+	
 #### Actuator system:
-* **Bluetooth module**:
-	* Installed on the bike and connected with the on bike Arduino.
-	* Function: exchange data and command with the smart phone.
 * **Smart lock**:
 	* Composed of a common lock and a motor to drive the lock, Installed on the bike and connected with the on bike Arduino.
 	* Function: lock the bike.
 
 #### Supporting system
+* **Bluetooth module**:
+	* Installed on the bike and connected with the on bike Arduino.
+	* Function: exchange data and command with the smart phone.
 * **Bike**
 	* Normal city bike.
 	* Function: holder for the Arduino and all the sensor.
 * **Battery**
 	* Power bank installed on the bike 
 	* Function: power the on bike circuit.
+	
 ### User interface
 * **Siren**:
 	* Installed on the bike and connected with the on bike Arduino.
@@ -80,9 +90,9 @@ title: Architecture
 
 ### Selected components
 
-####Off the shelf
+#### Off the shelf
 
-* **These is the components available in the market**
+* **These is the components available in the market chosen for the project**
 
 |Product name| Description | Price| 
 |------------|:------|:------|
@@ -93,9 +103,19 @@ title: Architecture
 |Mq9 pollution sensor |  high sensitivity and fast response gas sensor | €11.60|
 |Android phone | OS version greater than 4.4.| no need to buy|
 
+And cheaper solution can be found.
+
 ### Software Components
-* The libraries for the Bluetooth module, the Adafruit 10-DOF IMU breakout, and the stepper moter is provided by the hardware manufacture company. And they are compiled in the Arduino software.
-* The Android App Grab-a-bike uses standard andriod software developing library, and is developed using Andriod studio (version 2). 
+
+IDE used:
+* _Arduino_
+* _Android Studio 2_
+
+Libraries:
+* For the _Bluetooth module_, check [here!]()
+* For _Adafruit 10-DOF IMU breakout_, check [here!]()
+* For the stepper moter check [here!]()
+* The Android App _Grab-a-bike_ uses andriod software developing library for Android 4.4. 
 * The google map service is used in the smart phone, for detiails check [Google Map API](https://developers.google.com/maps/documentation/android-api/)
 
 
