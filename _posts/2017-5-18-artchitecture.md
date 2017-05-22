@@ -17,20 +17,23 @@ The complete system includs on bike sub-system, user smart phone, database runni
 ### Computional nodes:
 * **Smartphone**: 
     * Android phone (OS version>4.4) must held by the user while using the bike.
-    * Function:Provide login and logout, exchange data with on bike Arduino by Bluetooth, provide GPS location and present bike information.
-* **Arduino**:
+    * Function:Provide login and logout, exchange data with on bike processor by Bluetooth, provide GPS location and present bike information.
+* **On bike processor**:
 	* Installed on the bike and connected with the Bluetooth module, all the sensor and the lock.
 	* Function:  reason when to sound the siren, calculate the position (pitch, roll, yaw) from the accelerometer.
 			Calculate the pollution level from the raw data from the gas concentration sensor.
 			Control the motor of the lock and Bluetooth serial port.
-	
+* **Web server**
+    * Running remotely, providing database of user information bike information 
+    and pollution information
+
 ### Devices:
 #### Sensor system:
 * **Accelerometer**:
-	* Installed on the bike and connected with the on bike Arduino. 
-	* Function: provide anti-thief function, give information to the Arduino about the current posture of the bike.
+	* Installed on the bike and connected with the on bike processor. 
+	* Function: provide anti-thief function, give information to the processor about the current posture of the bike.
 * **Gas concentration sensor**:
-	* Installed on the bike and connected with the on bike Arduino.
+	* Installed on the bike and connected with the on bike processor.
 	* Function: detect the concentration level of pollution gas.
 	
 #### Actuator system:
@@ -40,21 +43,21 @@ The complete system includs on bike sub-system, user smart phone, database runni
 
 #### Supporting system
 * **Bluetooth module**:
-	* Installed on the bike and connected with the on bike Arduino.
+	* Installed on the bike and connected with the on bike processor.
 	* Function: exchange data and command with the smart phone.
 * **Bike**
 	* Normal city bike.
-	* Function: holder for the Arduino and all the sensor.
+	* Function: holder for the on bike processor and all the sensor.
 * **Battery**
 	* Power bank installed on the bike 
 	* Function: power the on bike circuit.
 	
 ### User interface
 * **Siren**:
-	* Installed on the bike and connected with the on bike Arduino.
+	* Installed on the bike and connected with the on bike processor.
 	* Function: Give a warning when the bike is being moved when it is locked.
 * **LEDs**:
-    * Installed on the handle of the bike and connected with the on bike Arduino.
+    * Installed on the handle of the bike and connected with the on bike processor.
     * Function: Give warnings when the polution in the air is too high.
 * **Smart Phone**:
    The smart phone works both as a computational node but also as an user interface.
@@ -76,7 +79,7 @@ The complete system includs on bike sub-system, user smart phone, database runni
 	* Get map of the current location.
 
 ### Database
-* Running on the remote computer.
+* Running on the web server.
 * Store and retrieve the bike location username and password on the cloud.
 * Using standard database API.
 
@@ -84,7 +87,7 @@ The complete system includs on bike sub-system, user smart phone, database runni
 * Running on cloud.
 * Return map of the location sent, including image pins on the location of the bike
 
-### Position and Pollution level calculation on the Arduino
+### Position and Pollution level calculation by on bike processor
 *	Calculate the position (pitch, roll, yaw) from the accelerometer.
 *	Calculate the concentration of gas from the gas sensor.
 
